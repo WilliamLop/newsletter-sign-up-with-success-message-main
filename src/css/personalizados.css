@@ -1,0 +1,45 @@
+.img{
+    width: 100%;
+}
+
+/* media */
+@media (min-width: 48rem){
+
+    .max-width-600{
+        max-width: 750px;  
+        padding-inline-start: 1rem;
+    } 
+}
+@media (min-width: 64rem){
+    
+    .max-width-600{
+        max-width: 900px;  
+        padding-inline-start: 1.5rem;
+    } 
+}
+
+.contenedor__mask{
+    clip-path: inset(0 0 100% 0);
+    transition: 1s ease-in-out;
+}
+
+.contenedor--show{
+    height: 100vh;
+    clip-path: inset(0 0 0 0);
+    transition: .3s ease-in-out;
+}
+
+.content__end{
+    clip-path: inset(0 0 100% 0);
+    transition: .3s ease-in-out;
+
+}
+.content__end--show{
+    clip-path: inset(0 0 0 0);
+    transition: .9s ease-in-out;
+
+}
+
+.input-focus{
+    background-color: red;
+}

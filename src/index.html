@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <!-- STYLES IMPORTADOS -->
+  <link rel="stylesheet" href="css/tailwind.css">
+  <!-- STYLES PERSONALIZADOS -->
+  <link rel="stylesheet" href="css/personalizados.css">
+  <!-- SCRIPT FONTAWESOME ICONS -->
+  <script src="https://kit.fontawesome.com/766c25c2d0.js" crossorigin="anonymous"></script>
+</head>
+<body class="font-roboto-regular text-base">
+
+  <main class="min-h-screen bg-CharcoalGrey grid md:place-items-center relative">
+    <!-- Sign-up form start -->
+    <!-- CONTENEDOR CARD -->
+    <div class="bg-White max-width-600 md:rounded-3xl mx-auto h-screen md:h-auto grid md:grid-cols-2 md:items-center rounded-md">
+      <!-- IMG CARD -->
+      <img src="../assets/images/illustration-sign-up-mobile.svg" alt="" class="block  md:hidden img">
+      <img src="../assets/images/illustration-sign-up-desktop.svg" alt="" class="hidden md:block md:col-start-2 md:col-end-3 md:self p-4">
+      <!-- SECCION INFORMACION -->
+      <section class=" w-11/12 p-4 mx-auto grid gap-4 lg:gap-6 md:col-start-1 md:col-end-2 md:row-start-1">
+        <!-- TITULO -->
+        <h1 class="text-3xl font-bold lg:text-5xl md:text-4xl  text-center md:text-left">Stay updated!</h1>
+        <!-- DESCRIPCCION -->
+        <p class="text-center md:text-left">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <!-- CONTENEDOR LISTA -->
+        <div class="grid gap-4">
+          <!-- ARTICULO LISTA 1 -->
+          <article class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check mt-1 text-Tomato"></i>
+            <p class="pr-4 md:pr-0">Product discovery and building what matters</p>
+          </article>
+          <!-- ARTICULO LISTA 2 -->
+          <article class="flex items-start gap-3">
+            <i class="fa-solid mt-1 fa-circle-check text-Tomato"></i>
+            <p class="pr-4 md:pr-0">Measuring to ensure updates are a success</p>
+          </article>
+          <!-- ARTICULO LISTA 3 -->
+          <article class="flex items-center gap-3">
+            <i class="fa-solid mt-1 fa-circle-check text-Tomato"></i>
+            <p class="">And much more!</p>
+          </article>
+        </div>
+        <!-- FORMULARIO -->
+        <form action="" class="grid gap-4 mt-4" id="form">
+          <div class="grid gap-1 relative">
+            <label for="email" class="text-xs font-bold">Email address</label>
+            <input type="email" name="email" id="email" class="border border-solid py-3 px-3 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"" placeholder="email@company.com" required>
+            <p class="text-Tomato text-xs absolute right-0 hidden text__error">Valid email required</p>
+          </div>
+          <input type="submit" value="Subscribe to monthly newsletter" class="cursor-pointer bg-DarkSlateGrey font-bold text-White py-3 px-3 rounded-md" id="btn-modal">
+        </form>
+      </section>
+    </div>
+
+    <!-- CONTENDOR MASK -->
+    <div class="absolute inset-0 h-0 bg-darkCapa md:grid md:place-items-center contenedor__mask" id="modal-container">
+      <!-- Sign-up form end -->
+      <div class="bg-white text-center mx-auto md:text-left md:rounded-3xl md:py-4 h-screen md:h-auto mx-auto shadow-md z-50 grid place-items-end content__end" id="modal-content">
+        <!-- CONTENIDO CARD END -->
+        <div class="grid h-4/5 md:h-auto grid-rows-[1fr,110px] gap-4 w-10/12 mx-auto">
+          <!-- INFO -->
+          <div class="pt-4">
+            <div class="grid gap-7">
+              <i class="fa-solid fa-check-to-slot text-Tomato text-5xl"></i>
+              <h1 class="text-4xl font-bold w-52 mx-auto md:mx-0">Thanks for subscribing!</h1>
+              <p class="text-CharcoalGrey max-w-sm mx-0">
+                A confirmation email has been sent to <span class="font-bold">ash@loremcompany.com. </span>
+                Please open it and click the button inside to confirm your subscription.
+              </p>
+            </div>
+          </div>
+          <!-- BUTTON -->
+          <button class="bg-DarkSlateGrey text-White py-3 pt-3 rounded-md bnt row-start-2 row-end-3 h-16 self-center" id="btn-close">Dismiss message</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
